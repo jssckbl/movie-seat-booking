@@ -1,0 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap");
+
+/* remove any unnecessary width */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #242333;
+  color: #fff;
+  display: flex; /* this helps prep to display everything equally horizontally and vertically */
+  flex-direction: column; /* otherwise it automatically displays as a row */
+  align-items: center; /* this is horizontal */
+  justify-content: center; /* this is vertical */
+  height: 100vh; /* final move to truly center content */
+  font-family: "Lato", sans-serif;
+  margin: 0;
+}
