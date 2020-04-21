@@ -35,6 +35,12 @@ body {
   appearance: none;
 }
 
+/* add a 3D effect */
+.container {
+  perspective: 1000px;
+  margin-bottom: 30px;
+}
+
 .seat {
   background-color: #444451;
   height: 12px;
@@ -104,4 +110,13 @@ body {
   margin: 15px 0;
   transform: rotateX(-45deg);
   box-shadow: 0 3px 10px rgba(255, 255, 255, 0.7);
+}
+
+p.text {
+  margin: 5px 0;
+}
+
+/* color of quantity and cost text */
+p.text span {
+  color: #6feaf6;
 }
