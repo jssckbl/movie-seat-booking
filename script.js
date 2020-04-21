@@ -6,6 +6,15 @@ const movieSelect = document.getElementById("movie");
 
 const ticketPrice = +movieSelect.value; // + has similar function to parseInt
 
+// Update total and count
+function updateSelectedCount() {
+  const selectedSeats = document.querySelectorAll(".row .seat.selected");
+  const selectedSeatsCount = selectedSeats.length; // length is a property that gets the number of elements in an array, or node list!
+  console.log(selectedSeatsCount);
+  count.innerText = selectedSeatsCount;
+  total.innerText = selectedSeatsCount * ticketPrice;
+}
+
 // registers 'click' only on seats that are unoccupied
 container.addEventListener("click", e => {
   if (
@@ -13,5 +22,7 @@ container.addEventListener("click", e => {
     !e.target.classList.contains("occupied")
   ) {
     e.target.classList.toggle("selected");
+
+    updateSelectedCount();
   }
 });
