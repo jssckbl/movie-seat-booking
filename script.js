@@ -9,6 +9,18 @@ let ticketPrice = +movieSelect.value; // + has similar function to parseInt
 // Update total and count
 function updateSelectedCount() {
   const selectedSeats = document.querySelectorAll(".row .seat.selected");
+
+  // Copy selected seats into array
+  // Map through array
+  // Return a new array of indexes
+
+  // spread operator copies the elements/values of an array rather than copying the actual array
+  const seatsIndex = [...selectedSeats].map(function(seat) {
+    return [...seats].indexOf(seat);
+  });
+
+  console.log(seatsIndex);
+
   const selectedSeatsCount = selectedSeats.length; // length is a property that gets the number of elements in an array, or node list!
   console.log(selectedSeatsCount);
   count.innerText = selectedSeatsCount;
