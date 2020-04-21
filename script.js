@@ -15,9 +15,7 @@ function updateSelectedCount() {
   // Return a new array of indexes
 
   // spread operator copies the elements/values of an array rather than copying the actual array
-  const seatsIndex = [...selectedSeats].map(function(seat) {
-    return [...seats].indexOf(seat);
-  });
+  const seatsIndex = [...selectedSeats].map(seat => [...seats].indexOf(seat));
 
   console.log(seatsIndex);
 
