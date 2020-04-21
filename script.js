@@ -17,7 +17,7 @@ function updateSelectedCount() {
   // spread operator copies the elements/values of an array rather than copying the actual array
   const seatsIndex = [...selectedSeats].map(seat => [...seats].indexOf(seat));
 
-  console.log(seatsIndex);
+  localStorage.setItem("selectedSeats", JSON.stringify(seatsIndex));
 
   const selectedSeatsCount = selectedSeats.length; // length is a property that gets the number of elements in an array, or node list!
   console.log(selectedSeatsCount);
