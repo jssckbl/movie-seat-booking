@@ -4,7 +4,7 @@ const count = document.getElementById("count");
 const total = document.getElementById("total");
 const movieSelect = document.getElementById("movie");
 
-const ticketPrice = +movieSelect.value; // + has similar function to parseInt
+let ticketPrice = +movieSelect.value; // + has similar function to parseInt
 
 // Update total and count
 function updateSelectedCount() {
@@ -14,6 +14,12 @@ function updateSelectedCount() {
   count.innerText = selectedSeatsCount;
   total.innerText = selectedSeatsCount * ticketPrice;
 }
+
+// Movie select event
+movieSelect.addEventListener("change", e => {
+  ticketPrice = +e.target.value;
+  updateSelectedCount();
+});
 
 // registers 'click' only on seats that are unoccupied
 container.addEventListener("click", e => {
