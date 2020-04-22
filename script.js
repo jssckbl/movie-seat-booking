@@ -4,6 +4,8 @@ const count = document.getElementById("count");
 const total = document.getElementById("total");
 const movieSelect = document.getElementById("movie");
 
+populateUI();
+
 let ticketPrice = +movieSelect.value; // + has similar function to parseInt
 
 // Save selected movie index and price
@@ -29,6 +31,12 @@ function updateSelectedCount() {
   console.log(selectedSeatsCount);
   count.innerText = selectedSeatsCount;
   total.innerText = selectedSeatsCount * ticketPrice;
+}
+
+// Get data from local storage and populate UI
+function populateUI() {
+  const selectedSeats = JSON.parse(localStorage.getItem("selectedSeats"));
+  console.log(selectedSeats);
 }
 
 // Movie select event
